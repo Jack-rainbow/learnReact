@@ -14,6 +14,44 @@ class TodoList extends Component {
         this.handleBtnDel = this.handleBtnDel.bind(this)
     }
     
+
+    // 生命周期
+    componentWillMount() { //初始化constructor后，但是还没渲染Dom
+        console.log(2, 'componentWillMount');
+    }
+
+    //react只会在第一次初始化成功会进入componentDidmount
+    componentDidMount() { //DOM节点生成后，后执行
+        console.log(1, 'componentDidMount');
+    }
+
+    
+    //通过对比nextprops和this.props, 可以将nextProps的state为当前组件的state，从而重新渲染组件
+    componentWillReceiveProps(nextProps) { //  在接收父组件改变后的props需要重新渲染组件时使用 
+        console.log('3', 'componentWillReceiveProps');
+    }
+    
+    shouldComponentUpdate() { // 唯一用于控制组件重新渲染的生命周期
+        return true;
+    }
+
+    componentWillUpdate() { //在prop和state 更新之前时候调用
+        console.log('4', 'componentWillUpdate');
+    }
+
+    
+    componentDidUpdate() { //组件更新后,可以拿到更新前的props和state
+        console.log('5', 'componentDidUpdate');
+    }
+
+    componentWillUnmount() { // 组件销毁前执行
+        console.log('6', 'componentWillUnmount');
+    }
+
+   
+
+   
+
     render() {
         return (
             <Fragment>
@@ -46,6 +84,7 @@ class TodoList extends Component {
            
         })
     }
+
 
     handleInputClick(e) {
         //setState并不保证是同步的，故setState的更新函数中异步访问访问event变量为空
