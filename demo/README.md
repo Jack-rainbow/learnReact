@@ -40,6 +40,3 @@ import { DatePicker } from 'antd';
 
 [3.0参考](https://3x.ant.design/docs/react/introduce)
 
-
-
- 
