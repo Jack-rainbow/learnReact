@@ -1,23 +1,24 @@
 import React from 'react';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { BrowserRouter as Router, NavLink } from 'react-router-dom';
+import './style.css'
 export default class Nav extends React.Component{
     render() {
         return(
                 <ul>
                     <li>
-                        <Link  to="/">主业</Link>
+                        <NavLink exact  to="/">主业</NavLink>
                     </li>
                     <li>
-                        <Link  to="/demo">demo</Link>
+                        <NavLink exact to="/demo">demo</NavLink>
                     </li>
                     <li>
-                        <Link  to="/mine">我的</Link>
+                        <NavLink exact to="/mine">我的</NavLink>
                     </li>
                     <li>
-                        <Link  to="/home">home</Link>
+                        <NavLink  exact to="/home">home</NavLink>
                     </li>
                     <li>
-                        <Link  to="/home/my">home/我的</Link>
+                        <NavLink  exact to="/home/my">home/我的</NavLink>
                     </li>
                 </ul>
         )
