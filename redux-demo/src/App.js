@@ -20,7 +20,7 @@ class App extends React.Component {
     // const {add, jian} = this.props;
     return (
       <div className="App">
-        {/* <Parent /> */}
+        <Parent />
         <div>
           {this.props.counter}
         </div>
