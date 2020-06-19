@@ -22,13 +22,13 @@ class UserInfoModel {
     // /**
     //  * @description: 注册
     //  */
-    // static async register(ctx) {
-    //     return await UserInfo.create({
-    //         userName: ctx.userName || '',
-    //         email: ctx.email || '',
-    //         password: md5(ctx.password) || ''
-    //     });
-    // }
+    static async register(ctx) {
+        return await UserInfo.create({
+            userName: ctx.userName || '',
+            email: ctx.email || '',
+            password: ctx.password || ''
+        });
+    }
 
 
     //  /**
