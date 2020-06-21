@@ -5,7 +5,7 @@ import cors from 'koa-cors';
 import accessLogger from './middleware/logs'; // 日志输出
 import signale from './config/signale'; // shell输出美化
 import InitManager from './routes';
-import Parameter  from 'koa-parameter';
+// import Parameter  from 'koa-parameter';
 import {
   CustomError,
   HttpError
@@ -18,7 +18,7 @@ import constants from './middleware/error/constants'
 
 const app = new Koa()
 
-Parameter(app)
+// Parameter(app)
 
 app
   .use(accessLogger()) // !  日志服务

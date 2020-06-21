@@ -2,7 +2,7 @@ require('dotenv').config();
 const env = process.env;
 const DATA_BASE = {
     sqlUserName: 'root',
-    sqlPassword: '123456',
+    sqlPassword: 'root',
     host: 'localhost',
     sqlName:'test',
     dialect: 'mysql',
