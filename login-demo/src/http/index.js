@@ -12,10 +12,10 @@ axios.create({
 
 //开始请求设置，发起拦截处理
 axios.interceptors.request.use(config => {
-    // const token = cookie.get('token')
-    // if (token) {
-    //     config.headers.Authorization = `Bearer ${token}`
-    // }
+    const token = cookie.get('token')
+    if (token) {
+        config.headers.Authorization = `Bearer ${token}`
+    }
 
     return config
 },(error)=> {

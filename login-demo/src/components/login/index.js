@@ -4,10 +4,8 @@ import {
     Input,
     message, 
     Button, 
-    Checkbox,
     PageHeader
 } from 'antd';
-import './index.css'
 import  {connect} from 'react-redux';
 import {bindActionCreators} from 'redux'
 import * as userSignUp from '../../store/actions/signUp'
@@ -35,33 +33,21 @@ class Registered extends React.Component {
             wrapperCol: { offset: 8, span: 16 },
         };
 
-        const onFinish = async (values) => {
-
-           let {code} =  await this.props.userSignUp.userSignUp(values);
-            message.success('注册成功');
-            if(code == '200') {
-                this.props.history.push('/login')
-            }
-        };
-
-        const onFinishFailed = errorInfo => {
-            console.log('Failed:', errorInfo);
-        };
-
+       
         return (
             <div>
                 <PageHeader
-                    onBack={this.onLinkLogin.bind(this)}
-                    title="登陆"
-                    subTitle="去登陆"
+                    onBack={this.onLinkRegistry.bind(this)}
+                    title="注册"
+                    subTitle="去注册"
                 />
                 <Form
                     className="login"
                     {...layout}
                     name="basic"
                     initialValues={{ remember: true }}
-                    onFinish={onFinish}
-                    onFinishFailed={onFinishFailed}
+                    onFinish={this.onFinish.bind(this)}
+                    onFinishFailed={this.onFinishFailed.bind(this)}
                     >
                     <Form.Item
                         label="用户名"
@@ -97,30 +83,35 @@ class Registered extends React.Component {
                         <Input.Password />
                     </Form.Item>
 
-                    <Form.Item
-                        label="确认密码"
-                        name="confrimPassword"
-                        rules={[{ required: true, message: '请输入您的密码' }]}
-                    >
-                        <Input.Password />
-                    </Form.Item>
-
-                    <Form.Item {...tailLayout} name="remember" valuePropName="checked">
-                        <Checkbox>记住我</Checkbox>
-                    </Form.Item>
-
                     <Form.Item {...tailLayout}>
                         <Button type="primary" htmlType="submit">
                             提交
                         </Button>
                     </Form.Item>
                 </Form>
+               
             </div>
         );
     }
-    onLinkLogin() {
-        this.props.history.push('/login')
+    onLinkRegistry() {
+        this.props.history.push('/registered')
     }
+
+    async onFinish(values) {
+        let {code, msg} =  await this.props.userSignUp.userLogin(values);
+        if(code == '200') {
+            this.props.history.push('/home')
+            message.success('登陆成功');
+        } else {
+            message.info(msg);
+        }
+       
+    };
+
+    onFinishFailed(errorInfo) {
+        console.log('Failed:', errorInfo);
+    };
+
 }
  
 const mapDispathchToProps = (dispatch)=> {

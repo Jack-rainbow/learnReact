@@ -24,9 +24,7 @@ class Tab extends React.Component {
     render() { 
         return ( 
             <Tabs defaultActiveKey="1" onChange={this.callback.bind(this)}>
-                <TabPane tab={<Link to={'/'}>首页</Link>} key="1">
-                    
-                </TabPane>
+                <TabPane tab={<Link to={'/login'}>登陆</Link>} key="1"></TabPane>
                 <TabPane tab={<Link to={'/registered'}>注册</Link>} key="2">
                 </TabPane>
             </Tabs>

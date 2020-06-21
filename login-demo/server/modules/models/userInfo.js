@@ -11,13 +11,13 @@ class UserInfoModel {
     //  * @param email 邮箱
     //  * @returns {Promise<Model>}
     //  */
-    // static async getUserEmail(email) {
-    //     return await UserInfo.findOne({
-    //         where: {
-    //             email
-    //         }
-    //     });
-    // }
+    static async getUserEmail(email) {
+        return await UserInfo.findOne({
+            where: {
+                email
+            }
+        });
+    }
     
     // /**
     //  * @description: 注册
