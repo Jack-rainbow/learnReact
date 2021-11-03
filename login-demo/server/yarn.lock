@@ -2372,13 +2372,6 @@ koa-onerror@^4.1.0:
     escape-html "^1.0.3"
     stream-wormhole "^1.1.0"
 
-koa-parameter@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/koa-parameter/-/koa-parameter-3.0.1.tgz#b0645f2412eadb79d3a1808d17ed30824a54c887"
-  integrity sha512-lkQBeLjO1Se7rGCj3DaHjUDDaT2rKNlxqX901X6b41/sAHpErxMj8c9eFuFbn7BzjZNvxS1c+uCtHJSOoeMldQ==
-  dependencies:
-    parameter "^2.2.0"
-
 koa-router@^7.4.0:
   version "7.4.0"
   resolved "https://registry.npmjs.org/koa-router/-/koa-router-7.4.0.tgz#aee1f7adc02d5cb31d7d67465c9eacc825e8c5e0"
@@ -2486,15 +2479,10 @@ lodash.once@^4.0.0:
   resolved "https://registry.npmjs.org/lodash.once/-/lodash.once-4.1.1.tgz#0dd3971213c7c56df880977d504c88fb471a97ac"
   integrity sha1-DdOXEhPHxW34gJd9UEyI+0cal6w=
 
-lodash@^4.17.11, lodash@^4.17.14, lodash@^4.17.4:
+lodash@^4.17.11, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.4:
   version "4.17.15"
   resolved "https://registry.npmjs.org/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
   integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
-
-lodash@^4.17.15:
-  version "4.17.15"
-  resolved "https://registry.npm.taobao.org/lodash/download/lodash-4.17.15.tgz?cache=0&sync_timestamp=1571657272199&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Flodash%2Fdownload%2Flodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
-  integrity sha1-tEf2ZwoEVbv+7dETku/zMOoJdUg=
 
 log4js@^4.5.1:
   version "4.5.1"
@@ -3014,11 +3002,6 @@ package-json@^4.0.0:
     registry-auth-token "^3.0.1"
     registry-url "^3.0.3"
     semver "^5.1.0"
-
-parameter@^2.2.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/parameter/-/parameter-2.4.0.tgz#85ea52e9dfee80265a07b086edbc352e68b39733"
-  integrity sha512-PxENY9SO4qYIBRUXJ7dM/nWxbzC4PIDws1U7IQsZ0tlZvrcuAKxJQZV6Jf0Lmpl1mSYaEPcvhMOL2UHtLU2Xtw==
 
 parse-glob@^3.0.4:
   version "3.0.4"
@@ -3847,10 +3830,10 @@ validator@^10.11.0:
   resolved "https://registry.npmjs.org/validator/-/validator-10.11.0.tgz#003108ea6e9a9874d31ccc9e5006856ccd76b228"
   integrity sha512-X/p3UZerAIsbBfN/IwahhYaBbY68EN/UQBWHtsbXGT5bfrH/p4NQzUCG1kF/rtKaNpnJ7jAu6NGTdSNtyNIXMw==
 
-validator@^13.1.1:
-  version "13.1.1"
-  resolved "https://registry.npm.taobao.org/validator/download/validator-13.1.1.tgz#f8811368473d2173a9d8611572b58c5783f223bf"
-  integrity sha1-+IETaEc9IXOp2GEVcrWMV4PyI78=
+validator@^13.7.0:
+  version "13.7.0"
+  resolved "https://registry.yarnpkg.com/validator/-/validator-13.7.0.tgz#4f9658ba13ba8f3d82ee881d3516489ea85c0857"
+  integrity sha512-nYXQLCBkpJ8X6ltALua9dRrZDHVYxjJ1wgskNt1lH9fzGjs3tgojGSCBjmEPwkWS1y29+DrizMTW19Pr9uB2nw==
 
 vary@^1.1.2:
   version "1.1.2"
